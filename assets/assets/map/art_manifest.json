@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "_doc": "v0.7 art hook. Every layer is optional: null = built-in vector placeholder. Paths are Flutter asset paths (add them to pubspec.yaml). A regions file must keep the ids and properties schema of world_38_lowpoly.geojson (id, name, kind, label_lon, label_lat; Polygon/MultiPolygon; link features optional) or the app falls back to the default map. v0.7: regions + terrain point at the Tactical Holo-Map (art/v0.7/map, MAP_SPEC.md); world_38_lowpoly.geojson stays the fallback and the source of the link features.",
+  "regions": "assets/map/world_v07.geojson",
+  "terrain": "assets/map/relief_v07.webp",
+  "coastline": null,
+  "labels": null,
+  "unitIcons": "assets/units/icons/icon_{icon}.png"
+}
