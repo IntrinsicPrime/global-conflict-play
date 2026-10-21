@@ -15,3 +15,14 @@ starter picks from kenney_impact/interface/sci-fi). License: CC0 1.0, see Licens
 | capital.ogg | Sci-Fi Sounds lowFrequency_explosion_000.ogg |
 | research.ogg | Interface Sounds maximize_006.ogg |
 | win.ogg | Interface Sounds confirmation_004.ogg |
+
+## v0.9a additions (Game Art Director, art/v0.9/sfx, all CC0 Kenney + ffmpeg synthesis)
+
+| File | Source |
+|---|---|
+| hit.ogg | sfx_hit (Kenney Impact impactMetal_heavy_003) |
+| explosion.ogg | sfx_explosion (Kenney Sci-Fi explosionCrunch_004, trimmed) |
+| capture_fx.ogg | sfx_capture (Kenney Impact impactPlate_heavy_001 + synth chime) |
+| ship_board.ogg | sfx_ship_board (Kenney Sci-Fi doorClose_001 + Impact impactMetal_medium_001) |
+| amphib_landing.ogg | sfx_amphibious_landing (synth splash + Kenney Impact impactSoft_heavy_001) |
+| tick.ogg | sfx_ui_tick (Kenney Interface tick_002) |
