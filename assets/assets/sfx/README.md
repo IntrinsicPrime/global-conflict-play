@@ -26,3 +26,15 @@ starter picks from kenney_impact/interface/sci-fi). License: CC0 1.0, see Licens
 | ship_board.ogg | sfx_ship_board (Kenney Sci-Fi doorClose_001 + Impact impactMetal_medium_001) |
 | amphib_landing.ogg | sfx_amphibious_landing (synth splash + Kenney Impact impactSoft_heavy_001) |
 | tick.ogg | sfx_ui_tick (Kenney Interface tick_002) |
+
+## v0.10c card-play cues (Kenney Interface Sounds, CC0, copied from resources/)
+
+| File | Source | Cue |
+|---|---|---|
+| card_pickup.ogg | Interface Sounds drop_002.ogg | card picked up (light haptic) |
+| card_invalid.ogg | Interface Sounds error_004.ogg | invalid drop (buzz + card shake) |
+| resolve_eco.ogg | Interface Sounds confirmation_001.ogg | Economic resolve (coin chime) |
+| resolve_dip.ogg | Interface Sounds glass_001.ogg | Diplomacy resolve (soft bell) |
+| resolve_tec.ogg | Interface Sounds glitch_002.ogg | Tech resolve (digital blip) |
+
+Military resolve reuses explosion.ogg (low boom); hover-valid reuses tick.ogg.

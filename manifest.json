@@ -6,7 +6,7 @@
     "background_color": "#000000",
     "theme_color": "#E10600",
     "description": "Global Conflict: Rise of a Superpower - turn-based strategy prototype v0.1",
-    "orientation": "portrait-primary",
+    "orientation": "any",
     "prefer_related_applications": false,
     "icons": [
         {
