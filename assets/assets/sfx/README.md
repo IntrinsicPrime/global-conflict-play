@@ -38,3 +38,16 @@ starter picks from kenney_impact/interface/sci-fi). License: CC0 1.0, see Licens
 | resolve_tec.ogg | Interface Sounds glitch_002.ogg | Tech resolve (digital blip) |
 
 Military resolve reuses explosion.ogg (low boom); hover-valid reuses tick.ogg.
+
+## U1b (2026-10-30, tbs_feel SFX plan) — CC0 Kenney, built by Art from resources/sfx
+
+| File | New source |
+|---|---|
+| tap.ogg | tbs_select (Interface) |
+| tick.ogg | tbs_move_step (Interface switch_002 + Impact footstep) — old tick clipped +1.0 dBFS |
+| hit.ogg | tbs_hit (Impact plate/glass) — old was -26.7 LUFS |
+| capital.ogg | tbs_ability_hit (Impact glass/soft) — **no explosion source** |
+| bt_dissolve.ogg | tbs_deselect (Interface back_002) — old 0.03 s click |
+| resolve_tec.ogg | tbs_modifier_chip (Interface tick/glass) — old 0.03 s click |
+
+All top-level files gain-normalized to buses (UI -26, combat -21.5, win -19 LUFS), 48 kHz stereo, limiter peak ≤ -2.8 dBFS. Log: `audio/license_log.csv`.
