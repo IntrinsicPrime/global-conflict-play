@@ -51,9 +51,40 @@
     For more details:
     * https://docs.flutter.dev/platform-integration/web/initialization
   -->
-  <!-- v0.8 sound: flutter_soloud 4.1.7 (MIT) web engine (WASM). -->
-  <script src="assets/packages/flutter_soloud/web/libflutter_soloud_plugin.js" defer></script>
-  <script src="assets/packages/flutter_soloud/web/init_module.dart.js" defer></script>
+  <!-- v0.8 sound: flutter_soloud 4.1.7 (MIT) web engine (WASM).
+       U31: loaded after the first frame, not before it (1.9 MB off the
+       startup path). gcLoadSound() adds the plugin's two scripts once and
+       resolves when Module_soloud is ready; lib/ui/sound_loader_web.dart
+       awaits it before SoLoud.init(). -->
+  <script>
+    window.gcLoadSound = function () {
+      if (window.gcSoundReady) return window.gcSoundReady;
+      window.gcSoundReady = new Promise(function (resolve, reject) {
+        var base = 'assets/packages/flutter_soloud/web/';
+        function add(name, next) {
+          var s = document.createElement('script');
+          s.src = base + name;
+          s.onload = next;
+          s.onerror = function () { reject(new Error('sound engine: ' + name)); };
+          document.body.appendChild(s);
+        }
+        add('libflutter_soloud_plugin.js', function () {
+          add('init_module.dart.js', function () {
+            var t0 = Date.now();
+            (function ready() {
+              if (typeof window.Module_soloud === 'object') return resolve();
+              if (Date.now() - t0 > 120000) return reject(new Error('sound engine timeout'));
+              setTimeout(ready, 50);
+            })();
+          });
+        });
+      });
+      return window.gcSoundReady;
+    };
+    window.addEventListener('flutter-first-frame', function () {
+      setTimeout(window.gcLoadSound, 0);
+    });
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
